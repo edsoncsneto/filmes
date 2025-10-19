@@ -31,7 +31,7 @@ jobs:
         run: mvn dependency:resolve
 
       - name: Compilar o projeto
-        run: mvn clean compile
+        run: mvn clean compile -Dfile.encoding=UTF-8 -Dproject.build.sourceEncoding=UTF-8
 
       - name: Executar testes
-        run: mvn test
+        run: mvn test -Dfile.encoding=UTF-8 -Dproject.build.sourceEncoding=UTF-8
